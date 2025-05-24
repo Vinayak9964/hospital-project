@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;   
+     scroll-behavior: smooth;
+
+}
+.hospital-photo{
+    width:100%;
+    height:100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hospital-photo img{
+    position: absolute;
+    top:0;
+    left: 0;
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    pointer-events: none;
+}
+.content{
+    position: relative;
+    z-index: 1;
+    width:100%;
+    height:100vh; 
+    background-image: linear-gradient(rgba(1,0,5,0.3),rgba(4,1,17,0.3));
+}
+.hotel-title {
+    background-color:#6a1b9a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position:sticky;
+}
+
+.hotel-title h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.nav-container{
+    background-color:white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(246, 242, 242, 0.2);
+    
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+    border-radius:30%;
+   /* border:2px solid #ff5200;*/
+    margin-left:2px;
+    
+}
+.logo img:hover{
+    box-shadow: 0 2px 5px black;
+    background-color: #ff5200;
+    
+
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    position:sticky;
+
+}
+
+.nav-links a {
+    color: rgb(23, 1, 1);
+    text-decoration: none;
+    font-size: 2em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color:white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    color:#6a1b9a;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height:60em;
+    
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* 100% per slide × 3 slides */
+  }
+  
+  .slide {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    height:1100px;
+    align-items: center;
+
+  }
+  .dots {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .dot {
+    height: 8px;
+    width: 8px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #333;
+  }
+
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    margin: 4rem 0;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 2.5rem 2rem 2rem 2rem;
+    text-align: center;
+    width: 320px;
+    transition: transform 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.feature-icon {
+    width: 90px; /* Adjust size as needed */
+    height: 90px; /* Adjust size as needed */
+    margin-bottom: 1.5rem;
+    /* Styles for the circular background */
+    background-color: #e3f2fd; /* Light blue, similar to screenshot */
+    border-radius: 50%; /* Make the background circular */
+    padding: 15px; /* Add padding to make the circle larger than the icon */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    object-fit: contain; /* Ensure the image fits within the circle */
+}
+
+.feature-card h3 {
+  color: #1a355e;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.feature-underline {
+  width: 60px;
+  height: 4px;
+  background: #cce6e6;
+  margin: 0 auto 1.2rem auto;
+  border-radius: 2px;
+}
+
+.feature-card p {
+  color: #222;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.doctors-section {
+    padding: 4rem 1rem;
+    background-color: #f8f0e3; /* Light beige background like the image */
+    text-align: center;
+}
+
+.doctors-section h2 {
+    font-size: 2rem;
+    color: #1a355e;
+    margin-bottom: 3rem;
+}
+
+.section-header {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 3rem; /* Space below the header */
+    padding: 0 1rem; /* Add horizontal padding */
+}
+
+.section-header h2 {
+    font-size: 2.5rem; /* Adjust font size to match the image */
+    color: #1a355e; /* Dark blue color from the image */
+    margin-bottom: 0.5rem; /* Space between heading and underline/paragraph */
+    position: relative; /* Needed for pseudo-element underline */
+    display: inline-block; /* Needed for underline width to fit content */
+}
+
+.section-header h2::after {
+    content: '';
+    display: block;
+    width: 80px; /* Width of the underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: #cce6e6; /* Light blue underline color */
+    margin-top: 8px; /* Space between heading and underline */
+    border-radius: 2px; /* Rounded ends for the underline */
+}
+
+.section-header p {
+    font-size: 1.2rem; /* Adjust font size */
+    color: #555; /* A dark grey color for the description */
+    margin-top: 0.5rem; /* Space above the paragraph */
+}
+
+.doctors-carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.doctors-slider {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 2rem; /* Space between cards */
+    padding-bottom: 1rem; /* Add some padding for the scrollbar */
+    /* Hide scrollbar for a cleaner look */
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.doctors-slider::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+.doctor-card {
+    flex: 0 0 300px; /* Set a base width and prevent shrinking/growing */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.doctor-img-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 50%; /* Circular shape */
+    border: 4px solid #6a1b9a; /* Purple border */
+    overflow: hidden;
+    display: flex; /* Use flex to center image inside */
+    justify-content: center;
+    align-items: center;
+}
+
+.doctor-img-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    border-radius: 50%; /* Ensure image is also circular */
+}
+
+.doctor-card h3 {
+    font-size: 1.4rem;
+    color: #1a355e; /* Dark blue color */
+    margin-bottom: 0.5rem;
+}
+
+.doctor-card p {
+    font-size: 1rem;
+    color: #6a1b9a; /* Purple color */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    min-height: 3em; /* Give some minimum height for longer titles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-appointment-btn {
+    display: inline-block;
+    background-color: #6a1b9a; /* Purple button background */
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 25px; /* Pill shape */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.book-appointment-btn:hover {
+    background-color: #5a1a8a; /* Darker purple on hover */
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-arrow.left {
+    left: 10px;
+}
+
+.nav-arrow.right {
+    right: 10px;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(106, 27, 154, 0.9); /* A slightly darker purple with some transparency */
+    border-color: #6a1b9a; /* Match the purple color */
+    color: white; /* Ensure the arrow color is visible */
+}
+
+/* Basic responsive adjustments */
+@media (max-width: 768px) {
+    .doctors-carousel-container {
+        justify-content: flex-start; /* Align to start to allow scrolling */
+        overflow-x: auto; /* Enable scrolling */
+        padding: 0 1rem;
+    }
+
+    .nav-arrow {
+        display: none; /* Hide arrows on small screens, use touch scroll */
+    }
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #f8f0e3; /* Light beige background from the image */
+    padding: 4rem 2rem;
+    font-family: Arial, sans-serif; /* Ensure consistent font */
+}
+
+.footer-container {
+    max-width: 2500px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.footer-about {
+    flex: 1 1 300px; /* Allow this section to grow but have a base width */
+    max-width: 400px;
+}
+
+.footer-logo img {
+    max-width: 400px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff; /* White background for icons */
+    color: #6a1b9a; /* Purple icon color, adjust if needed */
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.footer-social a:hover {
+    background-color: #6a1b9a; /* Purple background on hover */
+    color: #fff; /* White icon on hover */
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* Space between link columns */
+    flex: 2 1 500px; /* Allow links section to grow more */
+    justify-content: space-between; /* Distribute space between columns */
+}
+
+.footer-links-column {
+    flex: 1 1 150px; /* Allow columns to grow but have a base width */
+}
+
+.footer-links-column h4 {
+    font-size: 1.8rem;
+    color: #1a355e;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.footer-links-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links-column ul li a {
+    font-size: 1.5rem;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links-column ul li a:hover {
+    color: #6a1b9a; /* Purple color on hover */
+}
+
+.footer-scan-alert {
+    flex: 0 0 auto; /* Don't allow this to grow */
+    display: flex; /* Use flex to align button */
+    align-items: center;
+    justify-content: flex-end; /* Align button to the right */
+    width: 100%; /* Take full width to position correctly below links */
+    margin-top: 2rem; /* Space above the button */
+}
+
+.scan-alert-btn {
+    display: inline-block;
+    background-color: #1a355e;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.scan-alert-btn:hover {
+    background-color: #0f1e3d; /* Darker blue on hover */
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align items when stacked */
+        text-align: center; /* Center text */
+    }
+
+    .footer-about {
+        max-width: 100%;
+    }
+
+    .footer-logo img {
+        margin: 0 auto 1.5rem auto; /* Center logo */
+    }
+
+    .footer-social {
+        justify-content: center; /* Center social icons */
+    }
+
+    .footer-links {
+        flex-direction: column; /* Stack link columns */
+        align-items: center; /* Center align link columns */
+        gap: 1.5rem; /* Adjust gap between stacked columns */
+    }
+
+    .footer-links-column {
+        flex: 0 0 auto; /* Don't grow when stacked */
+        width: 100%; /* Take full width */
+    }
+
+     .footer-links-column h4 {
+        margin-bottom: 0.5rem;
+    }
+
+     .footer-links-column ul {
+        margin-bottom: 1rem; /* Space below each list */
+    }
+
+    .footer-scan-alert {
+        justify-content: center; /* Center button */
+    }
+}
